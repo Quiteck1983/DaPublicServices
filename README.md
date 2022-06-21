@@ -23,4 +23,4 @@ just the dashboard is more or less static js and php
 feel free to edit everything you want
 
 # example pics 
-![Screenshot](/images/@main/Screenshot 2022-06-21 210835.png)
+![Screenshot](./images/@main/Screenshot 2022-06-21 210835.png)
