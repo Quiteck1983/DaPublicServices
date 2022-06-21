@@ -1,0 +1,7 @@
+.navbar-branding{
+    background-color:#0000FF!important;
+}
+
+a.navbar-branding:focus,a.navbar-branding:hover{
+    background-color:#2424ff!important
+}

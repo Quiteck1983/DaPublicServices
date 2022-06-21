@@ -1,0 +1,201 @@
+    /** 
+     * @author      Florian Börner
+     * @datetime    2021-10-25
+     * @perpose     CSS for this website
+     * 
+     * @copyright   (c) Copyright by DaBurnerGermany
+     * 
+    */
+
+body {
+    background:#212529;
+    color:#fff;
+    color: white;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+.body-medic {
+    background:lightgray;
+    color:#000000;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+} 
+.color-medic {
+    color:lightgray;
+}
+  
+  a {
+    cursor: pointer;
+  }
+
+
+
+
+  .navbar-nav .navbar-subitem{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .navbar-nav .nav-item .navbar-subitem{
+    color:rgba(255,255,255,0.75);
+    padding-left: 1rem;
+  }
+
+  .navbar-nav .nav-item .navbar-subitem:hover{
+    color:#fff;
+  }
+
+  
+  .disabled{
+    background: gray !important;
+      color: white !important;
+  }
+
+  .nav-link.dropdown-toggle:after{
+    display: none !important; 
+  }
+
+  .fa { 
+    margin:2px; 
+    color:white; 
+    height:16px;
+    width: 16px;;
+    /*0.8125rem;*/
+} 
+
+.arrowdown{
+  background-image: url("../gfx/arrow-216-16.png");
+}
+.arrowup{
+  background-image: url("../gfx/arrow-154-16.png");
+}
+.trash{
+  background-image: url("../gfx/delete-16.png");
+}
+.edit{
+  background-image: url("../gfx/edit-2-16.png");
+}
+
+.subitem{
+  background:#343a40;
+}
+
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 80%;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.tbody-white{
+  background:#ffffff;
+  color:#000000;
+}
+
+.navbar-scroll{
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+  overflow-y: scroll;
+}
+
+.navbar-scroll::-webkit-scrollbar{
+  display: none !important;
+}
+
+.container-noscroll{
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+  overflow-y: scroll;
+}
+
+.container-noscroll::-webkit-scrollbar{
+  display: none !important;
+}
+
+.navbar-brand{
+  color: #fff;
+  top: 0px;
+  position: sticky;
+  width: 100%;
+}
+
+.btn-marginright{
+  margin-right: 10px;
+}
+
+.btn-settings-card{
+  width: 90%;
+  height:8rem; 
+  font-size:1.2rem;
+  text-transform:none;
+  margin-bottom:1rem;
+}
+.select-readonly{
+  pointer-events: none;
+}
+.select-sm{
+  padding: 0 !important;
+}
+
+.card-shadow {
+  box-shadow : 0 1px 1px #FFFFFF;
+  padding: 0.75rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.hidden {
+  display:none;
+}
+.form-invalid {
+  border:3px solid red
+}
+
+.avatar{
+  text-align:center;
+  height:175px;
+}
+.avatar_img{
+  height:100%;
+}
+
+.tagged{
+  font-size: 95%;
+  border:2px solid black;
+}
+.breakall{
+  word-break: break-all;
+}
+
+.rowCustom{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.card-portalview{
+  width:100%;
+  height:100%;
+  box-shadow : 1px 1px 1px #FFFFFF;
+}
+
+.spinner-big{
+  width:4rem;
+  height:4rem;
+}
+.loadingbar-middle{
+  margin-top: 50%;
+}
+
+.navhover:hover{
+  cursor:pointer;
+}
