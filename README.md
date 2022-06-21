@@ -26,5 +26,28 @@ feel free to edit everything you want
 located im /images
 installer and config in @main
 
-![startscreen](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/Screenshot%202022-06-21%20210835.png)
+## configuration
+![config](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/Screenshot%202022-06-21%20210835.png)
+![config](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/Screenshot%202022-06-21%20211127.png)
+![config](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/Screenshot%202022-06-21%20211610.png)
+![config](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/Screenshot%202022-06-21%20211636.png)
 
+## startScreens
+![screen_pol](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/startscreen_police.png)
+![screen_medic](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/startscreen_medic.png)
+
+## Systemscreens
+
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/medic_system/overview.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/police_system/add_file.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/medic_system/file.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/police_system/view_file.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/medic_system/file_entry.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/police_system/add_vehicle.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/police_system/control_centre.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/police_system/law_book.png)
+
+
+## archive system
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/police_system/archive.png)
+![...](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/police_system/archive_01.png)
