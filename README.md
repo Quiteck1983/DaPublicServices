@@ -22,5 +22,6 @@ just the dashboard is more or less static js and php
 # open source project
 feel free to edit everything you want
 
-# example pics 
-![Screenshot](./images/@main/Screenshot 2022-06-21 210835.png)
+# example images 
+located im /images
+installer and config in @main
