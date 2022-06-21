@@ -26,5 +26,5 @@ feel free to edit everything you want
 located im /images
 installer and config in @main
 
-![startscreen]([http://url/to/img.png](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/Screenshot%202022-06-21%20210835.png))
+![startscreen](https://github.com/DaBurnerGermany/DaPublicServices/blob/main/images/%40main/Screenshot%202022-06-21%20210835.png)
 
