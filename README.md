@@ -22,4 +22,5 @@ just the dashboard is more or less static js and php
 # open source project
 feel free to edit everything you want
 
-# exmaple pictures in /images
+# example pics 
+![Alt text](images/@main/to/Screenshot 2022-06-21 210835.png?raw=true "Settings")
