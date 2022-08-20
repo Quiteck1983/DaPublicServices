@@ -123,7 +123,7 @@ class RememberMe {
         $cookieSetting="";
 
         if (empty($data)){
-            throw new Exception("Data empty");
+            //throw new Exception("Data empty");
             
             return false; // User must have deleted accout
         }

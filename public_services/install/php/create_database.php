@@ -28,10 +28,10 @@
     $sqlfiles = [
         "police" => $rootFolder.$sqlFileLSPD
         ,"medic" => $rootFolder.$sqlFileLSMD
-        ,"" => $rootFolder.$sqlFileExtra
+        ,"extra_stuff" => $rootFolder.$sqlFileExtra
     ];
 
-    $databaseSchemes = [""=>""];
+    $databaseSchemes = ["extra_stuff"=>""];
 
     foreach($cases as $index => $databaseCfgFile){
         require_once($databaseCfgFile);

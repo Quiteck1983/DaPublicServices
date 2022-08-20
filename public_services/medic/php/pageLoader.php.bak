@@ -98,7 +98,7 @@
                     if($function == "form_files_add_entry"){
                         $data[0]["DoLoadAdditionalData"] = 1;
                     }
-                    
+                    #
                       
                     /*
                     if($viewtype == "edit" || $viewtype == "add"){

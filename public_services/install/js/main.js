@@ -2,13 +2,35 @@
 function getField(data){
     let config=[];
 
-    config.push('<div class="form-group">');
-    config.push('<label for="'+data.id+'">'+data.label+'</label>');
-    config.push('<input type="'+data.type+'" class="form-control" id="'+data.id+'" '+(data.helperid != "" ?  'aria-describedby="'+data.helperid+'"':"")+' placeholder="'+data.placeholder+'" '+(data.onkeyup != "" ? 'onkeyup="'+data.onkeyup+'"' : '')+'>');
-    if(data.helperid != ""){
-        config.push('<small id="'+data.helperid+'" class="form-text text-muted">'+data.helpertext+'</small>');
+    if(data.type != "select"){
+        config.push('<div class="form-group">');
+        config.push('<label for="'+data.id+'">'+data.label+'</label>');
+        config.push('<input type="'+data.type+'" class="form-control" id="'+data.id+'" '+(data.helperid != "" ?  'aria-describedby="'+data.helperid+'"':"")+' placeholder="'+data.placeholder+'" '+(data.onkeyup != "" ? 'onkeyup="'+data.onkeyup+'"' : '')+'>');
+        if(data.helperid != ""){
+            config.push('<small id="'+data.helperid+'" class="form-text text-muted">'+data.helpertext+'</small>');
+        }
+        config.push('</div>');
     }
-    config.push('</div>');
+    else{
+        config.push('<div class="form-group">');
+        config.push('<label for="'+data.id+'">'+data.label+'</label>');
+        config.push('<select class="form-control" id="'+data.id+'" '+(data.helperid != "" ?  'aria-describedby="'+data.helperid+'"':"")+' placeholder="'+data.placeholder+'" '+(data.onkeyup != "" ? 'onselect="'+data.onkeyup+'"' : '')+'>');
+        
+        for(let i=0; i<data.options.length;i++){
+            config.push('<option value="'+data.options[i]+'">' + data.options[i] + '</option>')
+        }
+
+        config.push('</select>');
+
+
+        if(data.helperid != ""){
+            config.push('<small id="'+data.helperid+'" class="form-text text-muted">'+data.helpertext+'</small>');
+        }
+        config.push('</div>');
+
+    }
+
+    
 
     return config.join("");
 
@@ -58,13 +80,15 @@ function getPageContent(database_cfg_done, software_cfg_done, databases_done){
             config.push('System Configuration done ');
             config.push('<button type="button" id="reset_system_configuration" class="btn btn-danger" onclick="doResetSystemConfig()">reset system config</button> ');
             config.push('</h4>');
+            config.push('<div class="alert alert-warning" role="alert" style="display:none" id = "id_alert">');
+            config.push('</div>');
             if(!databases_done){
                 config.push('<h4>');
                 config.push('Database create');
                 config.push('</h4>');
                 config.push('This can take several minutes!');
                 
-                config.push('<button type="button" class="btn btn-primary btn-block" onclick="startDatabaseCreation()">create entire database</button>');
+                config.push('<button type="button" class="btn btn-primary btn-block" onclick="startDatabaseCreation(this)">create entire database</button>');
             }
             else{
                 config.push('<h4 style = "color:green">');
@@ -145,9 +169,10 @@ function getFieldConfig(scenario){
         fieldcfg[0] = [];
         fieldcfg[0]["id"] = "default_language";
         fieldcfg[0]["label"] = "default language";
-        fieldcfg[0]["type"] = "text";
+        fieldcfg[0]["type"] = "select";
         fieldcfg[0]["helperid"] = "default_language";
-        fieldcfg[0]["helpertext"] = "en(english) or de(german) allowed! if input is not matching it will be en!";
+        fieldcfg[0]["options"] = ["en","de"];
+        //fieldcfg[0]["helpertext"] = "en(english) or de(german) allowed! if input is not matching it will be en!";
         fieldcfg[0]["placeholder"] = "Enter de or en";
         fieldcfg[0]["onkeyup"] = "checkIfSaveSoftwarecfg_allowed()";
         
@@ -389,8 +414,9 @@ function reset_database_connection(){
         url: "./install/php/phpfunctions.php",
         success: function(response){
             let json = JSON.parse(response);
-            if(json.success){
-                window.location.reload();
+
+            if(json.success){ 
+               window.location.reload();
             }
             else{
                 alertel.innerHTML = json.msg;
@@ -413,6 +439,7 @@ function doResetSystemConfig(){
         url: "./install/php/phpfunctions.php",
         success: function(response){
             let json = JSON.parse(response);
+            
             if(json.success){
                 window.location.reload();
             }
@@ -427,7 +454,13 @@ function doResetSystemConfig(){
         }
     });
 }
-function startDatabaseCreation(){
+function startDatabaseCreation(button){
+    button.disabled = true;
+
+    button.innerHTML = ''
+        +'<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>'
+        +' CREATE ENTIRE DATABASE';
+
     let alertel = document.getElementById("id_alert");
     $.ajax({
         type: "POST",

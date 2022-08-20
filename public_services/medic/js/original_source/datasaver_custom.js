@@ -52,7 +52,7 @@ function training_participant_add(trainingid){
         "id":trainingid
         ,"postuserid":$("#id_employee_id")[0].value
     };
-    customDatasaver("training_participant_add", JSON.stringify(data), false, false, "view_participants", trainingid,"");    
+    customDatasaver("training_participant_add", JSON.stringify(data), false, false, "training_participants", trainingid,"view");    
 }
 
 

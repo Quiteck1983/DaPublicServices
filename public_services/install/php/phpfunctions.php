@@ -162,18 +162,24 @@
         deleteFile($dir.$dataBaseFile);
         deleteFile($dir.$dbconfigFileLSPD);
         deleteFile($dir.$dbconfigFileLSMD);
+        deleteFile($sqlfilepath);
+        deleteFile($dir.$configFile);
+        deleteFile($dir.$configFileLSPD);
+        deleteFile($dir.$configFileLSMD);
 
         
         $retval["success"] = true;
         $retval["msg"] = "database config resetted";
     }
     else if($function == "reset_software_config"){
+        $dir = "..".DIRECTORY_SEPARATOR."..";
         $sqlfilepath = getSQLFilePath();
 
         deleteFile($sqlfilepath);
         deleteFile($dir.$configFile);
         deleteFile($dir.$configFileLSPD);
         deleteFile($dir.$configFileLSMD);
+
 
         
         $retval["success"] = true;

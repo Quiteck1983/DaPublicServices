@@ -254,7 +254,7 @@ function additionalData_form_files(data){
     let fsitems=[];
 
 
-    if(data.emergency_contacts.values !== undefined){
+    if(data.emergency_contacts !== undefined && data.emergency_contacts.values !== undefined){
         
         fsitems.push(
             DaBurnerGermany.Button({
@@ -274,7 +274,7 @@ function additionalData_form_files(data){
     }
     
 
-    if(data.emergency_contacts.values.length > 0){
+    if(data.emergency_contacts !== undefined && data.emergency_contacts.values.length > 0){
         fsitems.push(
             DaBurnerGermany.Grid({
                 id:""
@@ -295,16 +295,19 @@ function additionalData_form_files(data){
         fsitems.push("<p>"+getWord("global","no_data")+"</p>");
     }
 
-    DaBurnerGermany.AddToBody(
-        DaBurnerGermany.FieldSet({
-            id:""
-            ,title:getWord("files","emergency_contacts") + " (" + data.emergency_contacts.values.length+")"
-            ,startCollapsed:true
-            ,collapsible:true
-            ,colorscheme:"dark"
-            ,items:fsitems 
-        })
-    );
+    if(data.emergency_contacts !== undefined){
+        DaBurnerGermany.AddToBody(
+            DaBurnerGermany.FieldSet({
+                id:""
+                ,title:getWord("files","emergency_contacts") + " (" + data.emergency_contacts.values.length+")"
+                ,startCollapsed:true
+                ,collapsible:true
+                ,colorscheme:"dark"
+                ,items:fsitems 
+            })
+        );
+    }
+    
 
 
     if(data.treatments !== undefined){
@@ -891,7 +894,7 @@ function additionalData_form_passwordreset_foruser(data){
                 DaBurnerGermany.Button({
                     id:"savePassword"
                     ,text:getWord("global","save")
-                    ,onclick:"password_reset('view_officer',"+lastRequested["id"]+")"
+                    ,onclick:"password_reset('form_officer',"+lastRequested["id"]+")"
                     ,cls:[
                         "btn-success"
                         ,"btn-block"
