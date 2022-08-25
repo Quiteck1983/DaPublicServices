@@ -1,5 +1,6 @@
 # DaPublicServices
 * Webbased Police and Medic-System.
+* If you have addiotions just open an issue :)
 
 # Webbased
 * runs on xampp and nginx
