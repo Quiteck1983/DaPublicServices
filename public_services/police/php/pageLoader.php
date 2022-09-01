@@ -88,10 +88,10 @@
                     }
 
                     if($data[0]["type"] == "table"){
-                        $data[0]["allowQuicksearch"] = 0;
                         $allowColumn="";
                     }
                     else{
+                        $data[0]["allowQuicksearch"] = 0;
                         $data[0]["doDeleteData"] = 0;
                     }
                       
