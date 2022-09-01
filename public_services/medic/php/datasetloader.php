@@ -330,11 +330,18 @@
                 $whereStatement.= " AND (";
                 $doClose=true;
             }
+            else{
+                $whereStatement .= " WHERE ";
+            }
+
+            $temp = "";
 
             $quicksearch = strtolower($quicksearch);
             foreach($whereColumns as $col){
-                $whereStatement .= ($whereStatement == "" ? " WHERE " : " OR ") ."LOWER(". $col.") like '%".$db->escapeString($quicksearch)."%'";
+                $temp .= ($temp == "" ? "" : " OR ") ."LOWER(". $col.") like '%".$db->escapeString($quicksearch)."%'";
             }
+
+            $whereStatement.=$temp;
 
             if($doClose){
                 $whereStatement.=" ) ";
