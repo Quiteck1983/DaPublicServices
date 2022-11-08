@@ -11,7 +11,7 @@
 * databases gernerate automatically
 * systemuser is not deletable in ui
 
-#Importants Notes
+# Importants Notes
 * run <yourdomain>/public_services/install/update/update.php everytime you download source and installed software
 
 # Bootstrap, PHP, JS
