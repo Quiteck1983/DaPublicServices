@@ -280,8 +280,8 @@ function renderer_archiveaction(cell){
 function renderer_activedetails_actions(cell){
     let cellValue = cell.innerText;
     let temp = cellValue.split("|");
-
-    if(checkAllowed("archiv","recover_entries")){
+    
+    if(checkAllowed("archiv","delete_entries")){
         cell.innerHTML = DaBurnerGermany.CompositeField({
             items:[
                 DaBurnerGermany.Button({
@@ -303,6 +303,24 @@ function renderer_activedetails_actions(cell){
                     ,cls:[
                         "btn-danger"
                         ,"btn-sm"
+                    ]
+                    ,width:0
+                    ,disabled:false
+                })
+            ]
+        });
+    }
+    else if(checkAllowed("archiv","recover_entries")){
+        cell.innerHTML = DaBurnerGermany.CompositeField({
+            items:[
+                DaBurnerGermany.Button({
+                    id:""
+                    ,text:getWord("global","recover")
+                    ,onclick:"archive_recover('"+temp[0]+"','"+temp[1]+"','"+temp[2]+"',"+temp[3]+")"
+                    ,cls:[
+                        "btn-warning"
+                        ,"btn-sm"
+                        ,"btn-marginright"
                     ]
                     ,width:0
                     ,disabled:false
