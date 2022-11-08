@@ -135,7 +135,7 @@ function loadDataIntoForms(values){
                 htmlobject.value = DateConvertDateBaseToFormsFormat(values[i].value); 
             }
             else{
-                htmlobject.value = values[i].value;
+                htmlobject.value = values[i].value.replace(/<br>/g,"\n");
             }
 
 
