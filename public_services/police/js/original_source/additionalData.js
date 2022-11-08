@@ -866,7 +866,7 @@ function additionalData_form_passwordreset_foruser(data){
                 DaBurnerGermany.Button({
                     id:"savePassword"
                     ,text:getWord("global","save")
-                    ,onclick:"password_reset('view_officer',"+lastRequested["id"]+")"
+                    ,onclick:"password_reset('form_officer',"+lastRequested["id"]+")"
                     ,cls:[
                         "btn-success"
                         ,"btn-block"
